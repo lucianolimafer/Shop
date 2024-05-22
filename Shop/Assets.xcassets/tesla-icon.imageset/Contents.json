@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "pngegg.png",
+      "filename" : "tesla.svg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "tesla 1.svg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "tesla 2.svg",
       "idiom" : "universal",
       "scale" : "3x"
     }
