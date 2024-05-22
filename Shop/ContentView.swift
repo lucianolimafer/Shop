@@ -69,10 +69,10 @@ struct ContentView: View {
                             
                         } else {
                             Image(systemName: icon)
-                                .foregroundColor(.black)
+                                .foregroundColor(.gray)
                             Text(name)
                                 .padding(.horizontal)
-                                .foregroundColor(colorScheme == .dark ? .black : .white)
+                                .foregroundColor(.gray)
                         }
                     }.animation(.spring(), value: currentTab)
                 }
