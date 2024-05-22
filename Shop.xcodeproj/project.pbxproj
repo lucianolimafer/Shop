@@ -44,10 +44,13 @@
 		1F9F01CA2BF87287007CC9EB /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 1F9F01C92BF87287007CC9EB /* FirebaseStorage */; };
 		1F9F01CC2BF87287007CC9EB /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 1F9F01CB2BF87287007CC9EB /* FirebaseStorageCombine-Community */; };
 		1F9F01CE2BF87287007CC9EB /* FirebaseVertexAI-Preview in Frameworks */ = {isa = PBXBuildFile; productRef = 1F9F01CD2BF87287007CC9EB /* FirebaseVertexAI-Preview */; };
+		1FB0CD412BFD9B6B00D5BFD1 /* BrandsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB0CD402BFD9B6B00D5BFD1 /* BrandsModel.swift */; };
+		1FB0CD432BFD9F2E00D5BFD1 /* CarsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB0CD422BFD9F2E00D5BFD1 /* CarsModel.swift */; };
+		1FB0CD452BFDA68E00D5BFD1 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB0CD442BFDA68E00D5BFD1 /* Home.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1F9F017A2BF851D0007CC9EB /* Shop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shop.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F9F017A2BF851D0007CC9EB /* Car Shop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Car Shop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F9F017D2BF851D0007CC9EB /* ShopApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopApp.swift; sourceTree = "<group>"; };
 		1F9F017F2BF851D0007CC9EB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1F9F01812BF851D1007CC9EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -57,6 +60,9 @@
 		1F9F01902BF86695007CC9EB /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
 		1F9F01922BF86BA1007CC9EB /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		1F9F01942BF871BD007CC9EB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Desktop/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1FB0CD402BFD9B6B00D5BFD1 /* BrandsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandsModel.swift; sourceTree = "<group>"; };
+		1FB0CD422BFD9F2E00D5BFD1 /* CarsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsModel.swift; sourceTree = "<group>"; };
+		1FB0CD442BFDA68E00D5BFD1 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,7 +115,7 @@
 		1F9F017B2BF851D0007CC9EB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1F9F017A2BF851D0007CC9EB /* Shop.app */,
+				1F9F017A2BF851D0007CC9EB /* Car Shop.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -118,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				1F9F01942BF871BD007CC9EB /* GoogleService-Info.plist */,
+				1FB0CD3F2BFD9B3600D5BFD1 /* Models */,
 				1F9F018B2BF8521C007CC9EB /* Views */,
 				1F9F017D2BF851D0007CC9EB /* ShopApp.swift */,
 				1F9F017F2BF851D0007CC9EB /* ContentView.swift */,
@@ -142,8 +149,18 @@
 				1F9F018E2BF8530D007CC9EB /* Onboarding.swift */,
 				1F9F01902BF86695007CC9EB /* SignIn.swift */,
 				1F9F01922BF86BA1007CC9EB /* SignUp.swift */,
+				1FB0CD442BFDA68E00D5BFD1 /* Home.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		1FB0CD3F2BFD9B3600D5BFD1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1FB0CD402BFD9B6B00D5BFD1 /* BrandsModel.swift */,
+				1FB0CD422BFD9F2E00D5BFD1 /* CarsModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,7 +210,7 @@
 				1F9F01CD2BF87287007CC9EB /* FirebaseVertexAI-Preview */,
 			);
 			productName = Shop;
-			productReference = 1F9F017A2BF851D0007CC9EB /* Shop.app */;
+			productReference = 1F9F017A2BF851D0007CC9EB /* Car Shop.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -250,9 +267,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FB0CD412BFD9B6B00D5BFD1 /* BrandsModel.swift in Sources */,
 				1F9F01802BF851D0007CC9EB /* ContentView.swift in Sources */,
 				1F9F01932BF86BA1007CC9EB /* SignUp.swift in Sources */,
 				1F9F018D2BF85257007CC9EB /* Splash.swift in Sources */,
+				1FB0CD452BFDA68E00D5BFD1 /* Home.swift in Sources */,
+				1FB0CD432BFD9F2E00D5BFD1 /* CarsModel.swift in Sources */,
 				1F9F01912BF86695007CC9EB /* SignIn.swift in Sources */,
 				1F9F018F2BF8530D007CC9EB /* Onboarding.swift in Sources */,
 				1F9F017E2BF851D0007CC9EB /* ShopApp.swift in Sources */,
@@ -398,7 +418,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = limafer.Shop;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Car Shop";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -427,7 +447,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = limafer.Shop;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Car Shop";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
