@@ -21,7 +21,7 @@ struct Splash: View {
                     Onboarding()
                 }
             } else {
-                Text("SHOP")
+                Text("CAR SHOP")
                     .font(.largeTitle.bold())
             }
         }
