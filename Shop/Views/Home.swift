@@ -9,7 +9,14 @@ import SwiftUI
 
 struct Home: View {
     @State var currentCategory = "Todos"
-    @State var listCars = sampleCarsMock
+    
+    @State var listCars = [CarsModel]()
+    
+    @StateObject var db = Database()
+    
+    @State var car: CarsModel? = nil
+    
+    @State var showCar = false
     
     @Environment(\.colorScheme) var colorScheme
     
@@ -41,8 +48,14 @@ struct Home: View {
                     
                     //MARK: Cars List
                     carsView
+                        .fullScreenCover(isPresented: $showCar, content: {
+                            Car(data: car ?? db.listCars[0] )
+                        })
                 })
                 .padding()
+                .onAppear() {
+                    listCars = db.listCars
+                }
             }
             .scrollIndicators(.hidden)
         }
@@ -72,6 +85,11 @@ struct Home: View {
                 .padding(.bottom)
                 .background(.gray.opacity(0.3))
                 .clipShape(RoundedRectangle(cornerRadius: 30))
+                .onTapGesture {
+                    car = item
+                    showCar = true
+                    print("item é o \(item.title)")
+                }
             }
         }
         .zIndex(0)
@@ -104,9 +122,9 @@ struct Home: View {
                             
                             //MARK: filter by brand
                             if item.title == "Todos" {
-                                listCars = sampleCarsMock
+                                listCars = db.listCars
                             } else {
-                                listCars = sampleCarsMock.filter {
+                                listCars = db.listCars.filter {
                                     $0.brand == item.title
                                 }
                             }
